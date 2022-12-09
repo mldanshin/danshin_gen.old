@@ -1,0 +1,25 @@
+.event-list {
+    & > *:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.events-subscription-create > h2 {
+    @media screen and (max-width: 650px) {
+        text-align: center;
+    }
+    @media screen and (min-width: 651px) {
+        text-indent: 2rem;
+    }
+}
+
+.events-subscription-create p {
+    line-height: 1.5rem;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.events-subscription-create img,
+input[type="image"] {
+    vertical-align: sub;
+}

@@ -1,0 +1,68 @@
+.people-container {
+    z-index: 2;
+    padding: 0.5rem;
+    background-image: url("../img/people/background.png");
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 650px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    @media screen and (min-width: 651px) and (max-width: 950px) {
+        width: 30vw;
+    }
+    @media screen and (min-width: 951px) {
+        width: 25vw;
+    }
+    .person-short {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        color: #000000;
+        background-color: #ffffff;
+    }
+}
+
+.people-search {
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 2rem;
+}
+
+.people-ordering-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & > * {
+        margin: 0.5rem;
+    }
+}
+
+.people-ordering-item {
+    display: flex;
+    padding-bottom: 0.7rem;
+}
+
+.people-collection-container {
+    overflow-y: auto;
+    @media screen and (min-width: 651px) {
+        position: sticky;
+        top: 1rem;
+        height: 100vh;
+    }
+}
+
+.people-button-close {
+    align-self: flex-start;
+}
+
+.people-not-found {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff0000;
+    background-color: #f7e89a;
+}

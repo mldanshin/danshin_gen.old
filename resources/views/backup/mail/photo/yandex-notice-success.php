@@ -1,0 +1,1 @@
+DanshinGenOld photo backup successfully copied to Yandex disk.

@@ -1,0 +1,228 @@
+:root {
+    --person-card-background: #eee1e1;
+    --person-card-background-odd: #ffffff;
+    --small: #323232;
+    --person-control-border: #eee1e1;
+    --person-control-background: #ffffff;
+}
+
+.person-short {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.person-control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: flex-start;
+    margin: 1rem;
+    padding: 0.2rem;
+    border: 3px solid var(--person-control-border);
+    border-radius: 10px;
+    background-color: var(--person-control-background);
+    & > * {
+        margin: 0.5rem 0.5rem;
+    }
+}
+
+.person-container {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid var(--person-card-background);
+    border-radius: 10px;
+}
+
+.person-close {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--person-card-background);
+}
+
+.person-reader,
+.person-editor {
+    @media screen and (max-width: 1100px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (min-width: 1100px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 0.5fr;
+    }
+}
+
+.person-card-reader {
+    display: grid;
+    border: 5px solid var(--person-card-background);
+    background-color: var(--person-card-background);
+    @media screen and (max-width: 500px) {
+        background-color: var(--person-card-background-odd);
+        > :nth-child(odd) {
+            border-top: var(--person-card-background) 0.5rem solid;
+        }
+    }
+    @media screen and (min-width: 501px) {
+        grid-template-columns: 1fr 3fr;
+        gap: 0.5rem;
+        & > * {
+            background-color: var(--person-card-background-odd);
+        }
+    }
+    > :nth-child(odd) {
+        color: #868080;
+    }
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.3rem;
+    }
+}
+
+.person-card-reader__cell-relation-role {
+    display: grid !important;
+    grid-template-columns: 1fr 3fr !important;
+    align-items: center !important;
+}
+
+.person-card-reader__cell-list > * {
+    margin: 0.5rem;
+}
+
+.person-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    & > figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.person-card-editor {
+    display: grid;
+    border: 5px solid var(--person-card-background);
+    background-color: var(--person-card-background);
+    overflow-x: auto;
+    @media screen and (max-width: 500px) {
+        > :nth-child(odd) {
+            border-top: #535959 2px solid;
+            margin-top: 1rem;
+        }
+        & select {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        & select {
+            height: 2rem;
+        }
+        & input[type="text"],
+        & input[type="url"],
+        & input[type="tel"],
+        & input[type="number"],
+        & input[type="email"] {
+            height: 2rem;
+        }
+    }
+    @media screen and (min-width: 501px) {
+        grid-template-columns: 1fr 3fr;
+        gap: 0.5rem;
+        & > * {
+            background-color: var(--person-card-background-odd);
+        }
+    }
+    & > * {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.3rem;
+    }
+    & textarea {
+        resize: vertical;
+    }
+    & input[type="checkbox"] {
+        width: 2rem;
+        height: 2rem;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+.list-input-container {
+    & > .button-add {
+        align-self: flex-start;
+    }
+}
+
+.photo-img {
+    @media screen and (min-width: 1101px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 1100px) {
+        width: 80%;
+    }
+    @media screen and (max-height: 350px) {
+        max-height: 80vh;
+        width: auto;
+    }
+}
+
+.help-rule {
+    display: block;
+    color: var(--small);
+    text-align: justify;
+}
+
+.date-input {
+    width: 6em;
+}
+
+.tel-input {
+    width: 10em;
+}
+
+.number-input {
+    width: 3em;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    margin: 0 0 0.5rem 0;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    & .field-text {
+        width: 98%;
+    }
+    & >:first-child {
+        width: 98%;
+    }
+}
+
+.add-selected {
+    display: flex;
+    align-items: center;
+}
+
+.alert-danger {
+    font-size: 1.4rem;
+    color: #ff0000;
+    border: 3px solid var(--person-control-border);
+    border-radius: 10px;
+    background-color: var(--person-control-background);
+}
+
+.button-add {
+    @extend .button;
+    @media screen and (max-width: 1100px) {
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,59 @@
+@import 'about';
+@import 'events';
+@import 'layout';
+@import 'people';
+@import 'person';
+@import 'spinner';
+@import 'toast';
+@import 'tree';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    background: none;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.icon-sm {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.icon-md {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.icon-lg {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.text-link {
+    color: #0000ff;
+}

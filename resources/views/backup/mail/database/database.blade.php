@@ -1,0 +1,1 @@
+{{ __("backup.db.mail.content.body") }}
